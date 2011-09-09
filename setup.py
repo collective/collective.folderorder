@@ -2,10 +2,10 @@ from setuptools import setup, find_packages
 import sys, os
 
 version = '1.0'
-shortdesc = 'Sets sort order of plone folders'
+shortdesc = 'Set sort order of plone folders'
 longdesc =  open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()  
-longdesc += open(os.path.join("HISTORY.rst")).read()
-longdesc += open(os.path.join("HISTORY.rst")).read()
+longdesc += open(os.path.join(os.path.dirname(__file__), 'HISTORY.rst')).read()  
+longdesc += open(os.path.join(os.path.dirname(__file__), 'LICENSE.rst')).read()  
 
 setup(name='collective.folderorder',
       version=version,
