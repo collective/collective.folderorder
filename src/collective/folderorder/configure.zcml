@@ -5,7 +5,6 @@
  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
  i18n_domain="collective.folderorder">
 
-<!--
     <genericsetup:registerProfile
      name="default"
      title="collective.folderorder"
@@ -14,6 +13,7 @@
      provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 
+<!--
     <browser:page
      for="plone.folder.IOrdered"
      name="select_folder_ordering"

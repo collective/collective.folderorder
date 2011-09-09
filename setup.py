@@ -32,6 +32,7 @@ setup(name='collective.folderorder',
       install_requires=[
             'setuptools',
             'Plone',
+            'yafowil.zope2',
       ],
       tests_require=tests_require,
       entry_points="""
