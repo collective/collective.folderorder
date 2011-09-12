@@ -19,8 +19,8 @@
      for="plone.folder.interfaces.IOrderableFolder"
      name="select_folder_order"
      permission="cmf.ModifyPortalContent"
-     template="folderorderform.pt"
-     class=".views.SelectFolderOrderForm"
+     template="form.pt"
+     class=".form.SelectFolderOrderForm"
      />	
      
     <adapter 

@@ -12,7 +12,7 @@ _ = MessageFactory('collective.folderorder')
 class SelectFolderOrderForm(BrowserView):
     
     def form(self):
-        form = parse_from_YAML('collective.folderorder:folderorderform.yaml', self,  _)
+        form = parse_from_YAML('collective.folderorder:form.yaml', self,  _)
         controller = Controller(form, self.request)
         if not controller.next:
             return controller.rendered
