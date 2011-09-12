@@ -10,7 +10,10 @@
 <metal:content-core fill-slot="content-core">
 <metal:block define-macro="content-core">
 
-<div tal:replace="structure view/form">form</div>
+  <style type="text/css"
+         tal:content="string:#form-orderingform label {display:block;}" />
+
+  <div tal:replace="structure view/form">form</div>
 
 </metal:block>
 </metal:content-core>

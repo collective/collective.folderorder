@@ -21,7 +21,14 @@
      permission="cmf.ModifyPortalContent"
      template="form.pt"
      class=".form.SelectFolderOrderForm"
-     />	
+     /> 
+
+    <browser:page
+     for="*"
+     name="is_orderable_folder"
+     permission="zope2.View"
+     class=".action.ActionAvailableView"
+     /> 
      
     <adapter 
      factory=".reversed.ReversedOrdering"
