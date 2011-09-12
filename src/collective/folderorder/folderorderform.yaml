@@ -1,0 +1,20 @@
+factory: form
+name: orderingform
+props:
+    action: expr:context.action
+    class: edit-form enableUnloadProtection
+widgets:
+    - selectedorder:
+        factory: field:label:error:select
+        value: expr:context.currentorder()
+        props:
+            label: Select Ordering
+            vocabulary: expr:context.vocab_ordering()            
+    - save:
+        factory: submit
+        props:
+            action: save
+            expression: True
+            handler: context.save
+            next: context.next
+            label: Save 

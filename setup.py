@@ -33,8 +33,8 @@ setup(name='collective.folderorder',
             'setuptools',
             'Plone',
             'yafowil.zope2',
+            'yafowil.yaml',
       ],
-      tests_require=tests_require,
       entry_points="""
       [z3c.autoinclude.plugin]
       target = plone
