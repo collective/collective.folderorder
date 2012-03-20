@@ -1,5 +1,5 @@
 from zope.component import getAdapters
-import yafowil.zope2
+import yafowil.plone
 from yafowil.controller import Controller
 from yafowil.yaml import parse_from_YAML
 from zope.i18nmessageid import MessageFactory

@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '1.0'
+version = '1.2'
 shortdesc = 'Set sort order of plone folders'
 longdesc =  open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()  
 longdesc += open(os.path.join(os.path.dirname(__file__), 'HISTORY.rst')).read()  
@@ -32,7 +32,7 @@ setup(name='collective.folderorder',
       install_requires=[
             'setuptools',
             'Plone',
-            'yafowil.zope2',
+            'yafowil.plone',
             'yafowil.yaml',
       ],
       entry_points="""

@@ -6,4 +6,4 @@ class ReversedOrdering(DefaultOrdering):
         
     def idsInOrder(self):
         """ Return all object ids, in the correct order """
-        return reversed(super(ReversedOrdering, self).idsInOrder())        
+        return list(reversed(super(ReversedOrdering, self).idsInOrder()))
