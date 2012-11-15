@@ -9,7 +9,7 @@ widgets:
         value: expr:context.currentorder()
         props:
             label: Select Ordering
-            vocabulary: expr:context.vocab_ordering()            
+            vocabulary: expr:context.vocab_ordering()
     - save:
         factory: submit
         props:
@@ -17,4 +17,4 @@ widgets:
             expression: True
             handler: context.save
             next: context.next
-            label: Save 
+            label: Save
