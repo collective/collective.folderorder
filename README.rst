@@ -4,10 +4,10 @@ Set order of Folders in Plone
 Usally Plone folders are ordered by the creation order of the documents. This
 is what also can be sorted.
 
-This add-on allows to set an alternative order for container types, i.e. 
+This add-on allows to set an alternative order for container types, i.e.
 folders. Selecting the new entry ``Order`` from the *action* dropdown show a
-form. Within the form one of the registered ordering methods can be selected. 
-Theres are already adapters ``unordered`` and ``partial`` provided by 
+form. Within the form one of the registered ordering methods can be selected.
+Theres are already adapters ``unordered`` and ``partial`` provided by
 ``plone.folder`` package. This package add an adapter ``reversed``
 which just reverses the order provided by the default adapter.
 
@@ -47,6 +47,7 @@ Contributors
 
 - Jens W. Klein <jens@bluedynamics.com>
 
+- Johannes Raggam <johannes@bluedynamics.com>
+
 Thanks to David Glick (aka davisagli) for the initial hint to use
 ``plone.folder.interfaces.IOrdering``.
-
