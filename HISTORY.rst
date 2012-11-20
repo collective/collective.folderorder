@@ -5,6 +5,9 @@ History
 1.3dev (unreleased)
 -------------------
 
+- Support ordering in reversed mode.
+  [thet, 2012-11-20]
+
 - Provide custom implementation for getObjectPosition to return reversed
   ordering. So plone.app.folder.nogopip.GopipIndex also returns the correct
   order for getObjPositionInParent queries.
