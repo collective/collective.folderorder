@@ -1,9 +1,8 @@
-
-History
+Changes
 =======
 
-1.3dev (unreleased)
--------------------
+1.3 (2012-11-22)
+----------------
 
 - Support ordering in reversed mode.
   [thet, 2012-11-20]
