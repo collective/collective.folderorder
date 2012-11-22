@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.3'
+version = '1.3.1'
 shortdesc = 'Set sort order of plone folders'
 longdesc =  open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 longdesc += open(os.path.join(os.path.dirname(__file__), 'HISTORY.rst')).read()
@@ -28,7 +28,7 @@ setup(name='collective.folderorder',
       package_dir = {'': 'src'},
       namespace_packages=[],
       include_package_data=True,
-      zip_safe=True,
+      zip_safe=False,
       install_requires=[
             'setuptools',
             'Plone',
