@@ -1,6 +1,13 @@
 Changes
 =======
 
+1.3.2dev (unreleased)
+---------------------
+
+- Rename HISTORY.rst to CHANGES.rst.
+  [thet]
+
+
 1.3.1 (2012-11-22)
 ------------------
 
