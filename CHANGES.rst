@@ -1,8 +1,8 @@
 Changes
 =======
 
-1.3.2dev (unreleased)
----------------------
+1.3.2 (2013-04-16)
+------------------
 
 - Fix statusmessage to display "default" instead of the empty string when
   switching to the default ordering.
