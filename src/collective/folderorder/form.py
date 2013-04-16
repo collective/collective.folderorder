@@ -50,8 +50,9 @@ class SelectFolderOrderForm(BrowserView):
     def save(self, widget, data):
         neworder = unicode(data['selectedorder'].extracted)
         self.context.setOrdering(neworder)
+        msg = neworder and neworder or _('default')
         messages = IStatusMessage(self.request)
-        messages.addStatusMessage(_(u"Set folder ordering to '%s'." % neworder),
+        messages.addStatusMessage(_(u"Set folder ordering to '%s'." % msg),
                                   type="info")
 
     def next(self, request):

@@ -4,6 +4,10 @@ Changes
 1.3.2dev (unreleased)
 ---------------------
 
+- Fix statusmessage to display "default" instead of the empty string when
+  switching to the default ordering.
+  [thet]
+
 - Factor out orderings_list and current_order_name functions to be reused
   outside this package.
   [thet]
