@@ -1,11 +1,10 @@
 from setuptools import setup, find_packages
-import os
 
 version = '1.3.2'
 shortdesc = 'Set sort order of plone folders'
-longdesc =  open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
-longdesc += open(os.path.join(os.path.dirname(__file__), 'CHANGES.rst')).read()
-longdesc += open(os.path.join(os.path.dirname(__file__), 'LICENSE.rst')).read()
+longdesc =  open('README.rst').read() + '\n'
+longdesc += open('CHANGES.rst').read() + '\n'
+longdesc += open('LICENSE.rst').read()
 
 setup(name='collective.folderorder',
       version=version,
