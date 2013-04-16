@@ -4,6 +4,10 @@ Changes
 1.3.2dev (unreleased)
 ---------------------
 
+- Factor out orderings_list and current_order_name functions to be reused
+  outside this package.
+  [thet]
+
 - Rename HISTORY.rst to CHANGES.rst.
   [thet]
 
