@@ -32,15 +32,17 @@ def orderings_list(context):
     """
     adapters = getAdapters((context,), IOrdering)
     def make_trans(term):
-        if not term: return _('default')
-        else:        return term
+        if not term: 
+            return _('default')
+        else:        
+            return term
     orderings = [[x[0], make_trans(x[0])] for x in adapters]
     return orderings
 
 class SelectFolderOrderForm(BrowserView):
 
     def form(self):
-        form = parse_from_YAML('collective.folderorder:form.yaml', self,  _)
+        form = parse_from_YAML('collective.folderorder:form.yaml', self, _)
         controller = Controller(form, self.request)
         if not controller.next:
             return controller.rendered
@@ -48,7 +50,7 @@ class SelectFolderOrderForm(BrowserView):
         return u''
 
     def save(self, widget, data):
-        neworder = unicode(data['selectedorder'].extracted)
+        neworder = unicode(data['selectedorder'].extracted)      
         self.context.setOrdering(neworder)
         msg = neworder and neworder or _('default')
         messages = IStatusMessage(self.request)

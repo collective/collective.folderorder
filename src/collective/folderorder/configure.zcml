@@ -35,4 +35,8 @@
       name="reversed"
       />
 
+  <adapter
+      factory=".prepend.PrependOrdering"
+      name="prepend"
+      />
 </configure>
