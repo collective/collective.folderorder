@@ -1,6 +1,11 @@
 Changes
 =======
 
+1.4 (unreleased)
+----------------
+- added prepend mode for ordering. replaces now deprecated reverse mode
+  [benniboy]
+
 1.3.2 (2013-04-16)
 ------------------
 
