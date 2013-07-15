@@ -10,11 +10,20 @@
 <metal:content-core fill-slot="content-core">
 <metal:block define-macro="content-core">
 
+  <h2>Changes the ordering of the current content-objects</h2>
+  <p>If you want to change order behaviour, hit "select ordering", here you can change how the newly added objects are displayed.</p>
+  
+  <p>If you want to reorder the existing content, check the Reorder current content dropdown menu.
+     You can reorder by created, title, short name and last modified</p>
+
+  <p>Per default the "Invert sortorder of current content" checkbox is unticked,
+     if you want to invert the sortorder given by the "Reorder current content" value,
+     make a tick and hit "save"</p>
+  
   <style type="text/css"
          tal:content="string:#form-orderingform label {display:block;}" />
 
   <div tal:replace="structure view/form">form</div>
-
 </metal:block>
 </metal:content-core>
 

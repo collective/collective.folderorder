@@ -9,7 +9,20 @@ widgets:
         value: expr:context.currentorder()
         props:
             label: Select Ordering
-            vocabulary: expr:context.vocab_ordering()
+            vocabulary: expr:context.vocab_ordering()               
+            
+    - reorder_current:
+        factory: field:label:error:select
+        value: ---
+        props:
+            label: Reorder current content
+            vocabulary: expr:context.vocab_reorder()    
+                               
+    - reorder_current_invert_checkbox:
+        factory: field:label:error:checkbox
+        props:
+            label: Invert sortorder of current content
+                                 
     - save:
         factory: submit
         props:

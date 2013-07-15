@@ -3,8 +3,16 @@ Changes
 
 1.4 (unreleased)
 ----------------
-- added prepend mode for ordering. replaces now deprecated reverse mode
+
+- added prepend mode for ordering. replaces the now deprecated reverse mode
   [benniboy]
+
+- added some useful information to the form.pt
+  [benniboy]
+
+- added Reorder current content and invert sortorder to the form.yaml
+  [benniboy]
+
 
 1.3.2 (2013-04-16)
 ------------------
