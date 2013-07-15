@@ -57,10 +57,7 @@ class SelectFolderOrderForm(BrowserView):
         order_by = data['reorder_current'].extracted
         invert_sortorder = data['reorder_current_invert_checkbox'].extracted
         if order_by != '---':
-            if invert_sortorder == True:
-                ordering.orderObjects(order_by, 1)
-            else:
-                ordering.orderObjects(order_by)
+            ordering.orderObjects(order_by, invert_sortorder)
         
         msg = neworder and neworder or _('default')
         messages = IStatusMessage(self.request)
