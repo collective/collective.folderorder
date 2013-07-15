@@ -62,8 +62,6 @@ class SelectFolderOrderForm(BrowserView):
             else:
                 ordering.orderObjects(order_by)
         
-           
-        
         msg = neworder and neworder or _('default')
         messages = IStatusMessage(self.request)
         messages.addStatusMessage(_(u"Set folder ordering to '%s'." % msg),
