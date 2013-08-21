@@ -15,13 +15,13 @@ widgets:
         factory: field:label:error:select
         value: ---
         props:
-            label: Reorder current content
+            label: Reorder existing content
             vocabulary: expr:context.vocab_reorder()    
                                
     - reorder_current_invert_checkbox:
         factory: field:label:error:checkbox
         props:
-            label: Invert sortorder of current content
+            label: Invert sortorder of existing content
                                  
     - save:
         factory: submit

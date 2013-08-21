@@ -13,6 +13,9 @@ Changes
 - added Reorder current content and invert sortorder to the form.yaml
   [benniboy]
 
+- Add german translation.
+  [thet]
+
 
 1.3.2 (2013-04-16)
 ------------------

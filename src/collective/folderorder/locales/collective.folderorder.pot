@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-08-21 13:18+0000\n"
+"POT-Creation-Date: 2013-08-21 22:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,6 +31,26 @@ msgstr ""
 
 #: collective/folderorder/form.py:36
 msgid "default"
+msgstr ""
+
+#. Default: "Changes the ordering of the current content-objects"
+#: collective/folderorder/form.pt:13
+msgid "form-help-header"
+msgstr ""
+
+#. Default: "If you want to change order behaviour, hit \"select ordering\", here you can change how the newly added objects are displayed."
+#: collective/folderorder/form.pt:15
+msgid "form-help-ordering"
+msgstr ""
+
+#. Default: "To reorder the existing content, check the Reorder current content dropdown menu. You can reorder by created, title, short name and last modified"
+#: collective/folderorder/form.pt:18
+msgid "form-help-reorder"
+msgstr ""
+
+#. Default: "Per default the \"Invert sortorder of current content\" checkbox is unticked, if you want to invert the sortorder given by the \"Reorder current content\" value, make a tick and hit \"save\""
+#: collective/folderorder/form.pt:22
+msgid "form-help-reverse"
 msgstr ""
 
 #: collective/folderorder/form.py:85

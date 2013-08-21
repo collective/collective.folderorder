@@ -10,16 +10,17 @@
 <metal:content-core fill-slot="content-core">
 <metal:block define-macro="content-core">
 
-  <h2>Changes the ordering of the current content-objects</h2>
-  <p>If you want to change order behaviour, hit "select ordering", here you can 
+  <h2 i18n:translate="form-help-header">Changes the ordering of the current content-objects</h2>
+
+  <p i18n:translate="form-help-ordering">If you want to change order behaviour, hit "select ordering", here you can 
      change how the newly added objects are displayed.</p>
   
-  <p>To reorder the existing content, check the Reorder current 
-     content dropdown menu. You can reorder by created, title, short name and 
+  <p i18n:translate="form-help-reorder">To reorder the existing content, check the "Reorder existing
+     content" dropdown menu. You can reorder by created, title, short name and 
      last modified</p>
 
-  <p>Per default the "Invert sortorder of current content" checkbox is unticked,
-     if you want to invert the sortorder given by the "Reorder current content" 
+  <p i18n:translate="form-help-reverse">Per default the "Invert sortorder of existing content" checkbox is unticked,
+     if you want to invert the sortorder given by the "Reorder existing content" 
      value, make a tick and hit "save"</p>
   
   <style type="text/css"
