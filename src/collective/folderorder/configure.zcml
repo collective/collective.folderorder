@@ -5,6 +5,8 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="collective.folderorder">
 
+  <i18n:registerTranslations directory="locales" />
+
   <include package="Products.CMFCore" file="permissions.zcml" />"
 
   <genericsetup:registerProfile
@@ -39,4 +41,5 @@
       factory=".prepend.PrependOrdering"
       name="prepend"
       />
+
 </configure>

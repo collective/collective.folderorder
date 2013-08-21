@@ -1,0 +1,61 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-08-21 13:18+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.folderorder\n"
+
+#: collective/folderorder/form.py:81
+msgid "---"
+msgstr ""
+
+#: collective/folderorder/form.py:64
+msgid "Set folder ordering to '%s'."
+msgstr ""
+
+#: collective/folderorder/form.py:82
+msgid "created"
+msgstr ""
+
+#: collective/folderorder/form.py:36
+msgid "default"
+msgstr ""
+
+#: collective/folderorder/form.py:85
+msgid "last modified"
+msgstr ""
+
+msgid "partial"
+msgstr ""
+
+# TRANSLATE ORDERING NAMES
+# 
+msgid "prepend"
+msgstr ""
+
+msgid "reversed"
+msgstr ""
+
+#: collective/folderorder/form.py:84
+msgid "short name"
+msgstr ""
+
+#: collective/folderorder/form.py:83
+msgid "title"
+msgstr ""
+
+msgid "unordered"
+msgstr ""
+

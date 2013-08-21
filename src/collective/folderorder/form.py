@@ -32,10 +32,10 @@ def orderings_list(context):
     """
     adapters = getAdapters((context,), IOrdering)
     def make_trans(term):
-        if not term: 
+        if not term:
             return _('default')
-        else:        
-            return term
+        else:
+            return _(term)
     orderings = [[x[0], make_trans(x[0])] for x in adapters]
     return orderings
 
@@ -50,18 +50,15 @@ class SelectFolderOrderForm(BrowserView):
         return u''
 
     def save(self, widget, data):
-        neworder = unicode(data['selectedorder'].extracted)      
+        neworder = unicode(data['selectedorder'].extracted)
         self.context.setOrdering(neworder)
         ordering = self.context.getOrdering()
-        
+
         order_by = data['reorder_current'].extracted
         invert_sortorder = data['reorder_current_invert_checkbox'].extracted
         if order_by != '---':
-            if invert_sortorder == True:
-                ordering.orderObjects(order_by, 1)
-            else:
-                ordering.orderObjects(order_by)
-        
+            ordering.orderObjects(order_by, invert_sortorder)
+
         msg = neworder and neworder or _('default')
         messages = IStatusMessage(self.request)
         messages.addStatusMessage(_(u"Set folder ordering to '%s'." % msg),
@@ -79,12 +76,12 @@ class SelectFolderOrderForm(BrowserView):
 
     def vocab_ordering(self):
         return orderings_list(self.context)
-    
+
     def vocab_reorder(self):
         vocab = [('---', _(u'---')),
                  ('creation_date', _(u'created')),
                  ('title', _(u'title')),
                  ('id', _(u'short name')),
                  ('modification_date', _(u'last modified'))]
-        
+
         return vocab
