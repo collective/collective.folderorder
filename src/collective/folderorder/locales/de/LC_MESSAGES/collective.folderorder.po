@@ -31,7 +31,7 @@ msgstr "Erstellt"
 
 #: collective/folderorder/form.py:36
 msgid "default"
-msgstr "Standard"
+msgstr "Neue Inhalte am Ende einfügen."
 
 #. Default: "Changes the ordering of the current content-objects"
 #: collective/folderorder/form.pt:13
@@ -51,7 +51,7 @@ msgstr "Um bestehende Inhalte neu zu sortieren, wählen Sie \"Reoder existing co
 #. Default: "Per default the \"Invert sortorder of current content\" checkbox is unticked, if you want to invert the sortorder given by the \"Reorder existing content\" value, make a tick and hit \"save\""
 #: collective/folderorder/form.pt:22
 msgid "form-help-reverse"
-msgstr "Um die Sortierung umzukehren, wählen Sie die \"Invert sortorder of existing content\" und klicken dann auf \"Save\""
+msgstr "Um die Sortierung umzukehren, wählen Sie die \"Invert sortorder of existing content\" und klicken dann auf \"Save\"."
 
 #: collective/folderorder/form.py:85
 msgid "last modified"
@@ -61,7 +61,7 @@ msgid "partial"
 msgstr "Teilweise"
 
 msgid "prepend"
-msgstr "Neue Inhalte vorne einfügen"
+msgstr "Neue Inhalte am Beginn einfügen."
 
 msgid "reversed"
 msgstr "Umgekehrt"
