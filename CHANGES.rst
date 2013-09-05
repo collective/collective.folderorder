@@ -1,7 +1,7 @@
 Changes
 =======
 
-1.4 (unreleased)
+1.4 (2013-09-05)
 ----------------
 
 - added prepend mode for ordering. replaces the now deprecated reverse mode
