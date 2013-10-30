@@ -25,6 +25,12 @@ msgstr ""
 msgid "Set folder ordering to '%s'."
 msgstr ""
 
+msgid "Reordered by '%s'."
+msgstr ""
+
+msgid "Did no reordering."
+msgstr ""
+
 #: collective/folderorder/form.py:82
 msgid "created"
 msgstr ""

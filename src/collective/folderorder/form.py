@@ -55,17 +55,23 @@ class SelectFolderOrderForm(BrowserView):
     def save(self, widget, data):
         neworder = unicode(data['selectedorder'].extracted)
         self.context.setOrdering(neworder)
-        ordering = self.context.getOrdering()
 
         order_by = data['reorder_current'].extracted
         invert_sortorder = data['reorder_current_invert_checkbox'].extracted
+        reorder_msg = None
         if order_by != '---':
+            ordering = self.context.getOrdering()
             ordering.orderObjects(order_by, invert_sortorder)
+            reorder_msg = _(u"Reordered by '%s'.") % order_by
+        else:
+            reorder_msg = _("Did no reordering.")
 
-        msg = neworder and neworder or _('default')
         messages = IStatusMessage(self.request)
-        messages.addStatusMessage(_(u"Set folder ordering to '%s'." % msg),
+        messages.addStatusMessage(_(u"Set folder ordering to '%s'.") %
+                                  neworder and neworder or _('default'),
                                   type="info")
+        if reorder_msg:
+            messages.addStatusMessage(reorder_msg, type="info")
 
     def next(self, request):
         return '%s/select_folder_order' % self.context.absolute_url()
@@ -81,10 +87,8 @@ class SelectFolderOrderForm(BrowserView):
         return orderings_list(self.context)
 
     def vocab_reorder(self):
-        vocab = [('---', _(u'---')),
-                 ('creation_date', _(u'created')),
-                 ('title', _(u'title')),
-                 ('id', _(u'short name')),
-                 ('modification_date', _(u'last modified'))]
-
-        return vocab
+        return [('---', _(u'---')),
+                ('title', _(u'title')),
+                ('id', _(u'short name')),
+                ('creation_date', _(u'created')),
+                ('modification_date', _(u'last modified'))]
