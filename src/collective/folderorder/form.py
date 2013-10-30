@@ -23,6 +23,7 @@ def current_order_name(context):
         return u''
     return name[0]
 
+
 def orderings_list(context):
     """Return ordering names as list.
     :param context: The content context to create the orderings list on.
@@ -31,6 +32,7 @@ def orderings_list(context):
 
     """
     adapters = getAdapters((context,), IOrdering)
+
     def make_trans(term):
         if not term:
             return _('default')
@@ -38,6 +40,7 @@ def orderings_list(context):
             return _(term)
     orderings = [[x[0], make_trans(x[0])] for x in adapters]
     return orderings
+
 
 class SelectFolderOrderForm(BrowserView):
 
