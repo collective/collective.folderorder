@@ -1,6 +1,13 @@
 Changes
 =======
 
+1.4.1 (2014-01-29)
+------------------
+
+- Added a statusmessage when items were reordered.
+  [thet]
+
+
 1.4 (2013-09-05)
 ----------------
 
