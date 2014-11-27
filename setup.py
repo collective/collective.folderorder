@@ -31,7 +31,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'Plone',
+        'Products.CMFPlone',
         'Products.statusmessages',
         'plone.folder',
         'yafowil',
