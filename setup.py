@@ -41,6 +41,12 @@ setup(
         'zope.i18nmessageid',
         'Zope2',  # For Products.Five
     ],
+    extras_require={
+        'test': [
+            'plone.app.robotframework',
+            'plone.app.testing',
+        ],
+    },
     entry_points="""
     [z3c.autoinclude.plugin]
     target = plone
