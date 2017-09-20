@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from plone.folder.default import DefaultOrdering
 
 
