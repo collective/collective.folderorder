@@ -24,7 +24,7 @@ class ReversedOrdering(DefaultOrdering):
             raise ValueError('No object with id "{0}" exists.'.format(id))
 
     # re-implementing to support correct object moves
-    def moveObjectsByDelta(self, ids, delta, subset_ids=None,
+    def moveObjectsByDelta(self, ids, delta, subset_ids=None,  # noqa: C901 FIXME
                            suppress_events=False):
         """Move the specified ids (a sequence, or a single string id) by the
         given delta (a positive or negative number). By default, this moves the
