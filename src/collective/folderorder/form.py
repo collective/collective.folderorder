@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from zope.component import getAdapters
 from yafowil.controller import Controller
 from yafowil.yaml import parse_from_YAML
