@@ -64,16 +64,16 @@ class SelectFolderOrderForm(BrowserView):
         if order_by != '---':
             ordering = self.context.getOrdering()
             ordering.orderObjects(order_by, invert_sortorder)
-            reorder_msg = _(u"Reordered by '%s'.") % order_by
+            reorder_msg = _(u'Reordered by "%s".') % order_by
         else:
-            reorder_msg = _("Did no reordering.")
+            reorder_msg = _('Did no reordering.')
 
         messages = IStatusMessage(self.request)
-        messages.addStatusMessage(_(u"Set folder ordering to '%s'.") %
+        messages.addStatusMessage(_(u'Set folder ordering to "%s".') %
                                   neworder and neworder or _('default'),
-                                  type="info")
+                                  type='info')
         if reorder_msg:
-            messages.addStatusMessage(reorder_msg, type="info")
+            messages.addStatusMessage(reorder_msg, type='info')
 
     def next(self, request):
         return '%s/select_folder_order' % self.context.absolute_url()
