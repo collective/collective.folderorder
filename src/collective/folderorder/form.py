@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
-from zope.component import getAdapters
+from plone.folder.interfaces import IOrdering
+from Products.Five import BrowserView
+from Products.statusmessages.interfaces import IStatusMessage
 from yafowil.controller import Controller
 from yafowil.yaml import parse_from_YAML
+from zope.component import getAdapters
 from zope.i18nmessageid import MessageFactory
-from Products.Five import BrowserView
-from plone.folder.interfaces import IOrdering
-from Products.statusmessages.interfaces import IStatusMessage
+
 
 _ = MessageFactory('collective.folderorder')
 
