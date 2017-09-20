@@ -17,8 +17,9 @@ script:
   - bin/code-analysis
   - bin/test
 after_success:
-  - bin/createcoverage
-  - pip install --upgrade coveralls
-  - coveralls
+# FIXME: find out how to avoid coverage timeouts
+#  - bin/createcoverage
+#  - pip install --upgrade coveralls
+#  - coveralls
 notifications:
   irc: irc.freenode.org#plone-testing
