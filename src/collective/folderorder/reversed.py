@@ -21,7 +21,7 @@ class ReversedOrdering(DefaultOrdering):
                 pos_[key] = val
             return pos_[id]
         else:
-            raise ValueError('No object with id "%s" exists.' % id)
+            raise ValueError('No object with id "{0}" exists.'.format(id))
 
     # re-implementing to support correct object moves
     def moveObjectsByDelta(self, ids, delta, subset_ids=None,
@@ -73,7 +73,7 @@ class ReversedOrdering(DefaultOrdering):
                         pos[id] = i
                         idx += 1
                     except KeyError:
-                        raise ValueError('No object with id "%s" exists.' % id)
+                        raise ValueError('No object with id "{0}" exists.'.format(id))
         if not suppress_events:
             notifyContainerModified(self.context)
         return counter
