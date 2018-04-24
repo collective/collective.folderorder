@@ -7,6 +7,8 @@ Changes
 - Depend on ``Products.CMFPlone`` instead of ``Plone`` to not fetch unnecessary dependencies.
   [thet]
 
+- Fix ``namespace_packages`` in ``setup.py`` to make z3c.autoinclude work.
+  [idgserpro]
 
 1.4.1 (2014-01-29)
 ------------------
