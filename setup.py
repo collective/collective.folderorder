@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = '1.5.dev0'
+version = '1.4.2'
 shortdesc = 'Set sort order of plone folders'
 longdesc = open('README.rst').read() + '\n'
 longdesc += open('CHANGES.rst').read() + '\n'

@@ -1,8 +1,8 @@
 Changes
 =======
 
-1.5 (unreleased)
-----------------
+1.4.2 (2018-07-19)
+------------------
 
 - Depend on ``Products.CMFPlone`` instead of ``Plone`` to not fetch unnecessary dependencies.
   [thet]
