@@ -6,6 +6,7 @@ from yafowil.controller import Controller
 from yafowil.yaml import parse_from_YAML
 from zope.component import getAdapters
 from zope.i18nmessageid import MessageFactory
+import six
 
 
 _ = MessageFactory("collective.folderorder")
@@ -58,7 +59,7 @@ class SelectFolderOrderForm(BrowserView):
         return u""
 
     def save(self, widget, data):
-        neworder = unicode(data["selectedorder"].extracted)
+        neworder = six.text_type(data["selectedorder"].extracted)
         self.context.setOrdering(neworder)
 
         order_by = data["reorder_current"].extracted

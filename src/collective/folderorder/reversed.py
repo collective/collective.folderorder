@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from plone.folder.default import DefaultOrdering
 from zope.container.contained import notifyContainerModified
+import six
+from six.moves import range
 
 
 class ReversedOrdering(DefaultOrdering):
@@ -38,7 +40,7 @@ class ReversedOrdering(DefaultOrdering):
         order = self._order()
         pos = self._pos()
         min_position = 0
-        if isinstance(ids, basestring):
+        if isinstance(ids, six.string_types):
             ids = [ids]
         if subset_ids is None:
             # delegate to default implementation
