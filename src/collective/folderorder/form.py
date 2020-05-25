@@ -8,7 +8,7 @@ from zope.component import getAdapters
 from zope.i18nmessageid import MessageFactory
 
 
-_ = MessageFactory('collective.folderorder')
+_ = MessageFactory("collective.folderorder")
 
 
 def current_order_name(context):
@@ -19,10 +19,13 @@ def current_order_name(context):
 
     """
     currentadapter = context.getOrdering()
-    name = [n for n, a in getAdapters((context,), IOrdering)
-            if type(a) is type(currentadapter)]
+    name = [
+        n
+        for n, a in getAdapters((context,), IOrdering)
+        if type(a) is type(currentadapter)
+    ]
     if len(name) != 1:
-        return u''
+        return u""
     return name[0]
 
 
@@ -37,46 +40,47 @@ def orderings_list(context):
 
     def make_trans(term):
         if not term:
-            return _('default')
+            return _("default")
         else:
             return _(term)
+
     orderings = [[x[0], make_trans(x[0])] for x in adapters]
     return orderings
 
 
 class SelectFolderOrderForm(BrowserView):
-
     def form(self):
-        form = parse_from_YAML('collective.folderorder:form.yaml', self, _)
+        form = parse_from_YAML("collective.folderorder:form.yaml", self, _)
         controller = Controller(form, self.request)
         if not controller.next:
             return controller.rendered
         self.context.REQUEST.response.redirect(controller.next)
-        return u''
+        return u""
 
     def save(self, widget, data):
-        neworder = unicode(data['selectedorder'].extracted)
+        neworder = unicode(data["selectedorder"].extracted)
         self.context.setOrdering(neworder)
 
-        order_by = data['reorder_current'].extracted
-        invert_sortorder = data['reorder_current_invert_checkbox'].extracted
+        order_by = data["reorder_current"].extracted
+        invert_sortorder = data["reorder_current_invert_checkbox"].extracted
         reorder_msg = None
-        if order_by != '---':
+        if order_by != "---":
             ordering = self.context.getOrdering()
             ordering.orderObjects(order_by, invert_sortorder)
             reorder_msg = _(u'Reordered by "%s".') % order_by  # FIXME: noqa: S001
         else:
-            reorder_msg = _('Did no reordering.')
+            reorder_msg = _("Did no reordering.")
 
         messages = IStatusMessage(self.request)
-        messages.addStatusMessage(_(u'Set folder ordering to "%s".') %
-                                  neworder and neworder or _('default'),
-                                  type='info')  # FIXME: noqa: S001
+        messages.addStatusMessage(
+            _(u'Set folder ordering to "%s".') % neworder and neworder or _("default"),
+            type="info",
+        )  # FIXME: noqa: S001
         if reorder_msg:
-            messages.addStatusMessage(reorder_msg, type='info')
+            messages.addStatusMessage(reorder_msg, type="info")
 
     def next(self, request):
-        return self.context.absolute_url() + '/select_folder_order'
+        return self.context.absolute_url() + "/select_folder_order"
 
     @property
     def action(self):
@@ -89,8 +93,10 @@ class SelectFolderOrderForm(BrowserView):
         return orderings_list(self.context)
 
     def vocab_reorder(self):
-        return [('---', _(u'---')),
-                ('title', _(u'title')),
-                ('id', _(u'short name')),
-                ('creation_date', _(u'created')),
-                ('modification_date', _(u'last modified'))]
+        return [
+            ("---", _(u"---")),
+            ("title", _(u"title")),
+            ("id", _(u"short name")),
+            ("creation_date", _(u"created")),
+            ("modification_date", _(u"last modified")),
+        ]

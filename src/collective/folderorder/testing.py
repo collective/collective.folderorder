@@ -8,11 +8,13 @@ import pkg_resources
 
 
 try:
-    pkg_resources.get_distribution('plone.app.contenttypes')
+    pkg_resources.get_distribution("plone.app.contenttypes")
 except pkg_resources.DistributionNotFound:
     from plone.app.testing import PLONE_FIXTURE
 else:
-    from plone.app.contenttypes.testing import PLONE_APP_CONTENTTYPES_FIXTURE as PLONE_FIXTURE
+    from plone.app.contenttypes.testing import (
+        PLONE_APP_CONTENTTYPES_FIXTURE as PLONE_FIXTURE,
+    )
 
 
 class Fixture(PloneSandboxLayer):
@@ -21,16 +23,19 @@ class Fixture(PloneSandboxLayer):
 
     def setUpZope(self, app, configurationContext):
         import collective.folderorder
+
         self.loadZCML(package=collective.folderorder)
 
     def setUpPloneSite(self, portal):
-        self.applyProfile(portal, 'collective.folderorder:default')
+        self.applyProfile(portal, "collective.folderorder:default")
 
 
 FIXTURE = Fixture()
 
 INTEGRATION_TESTING = IntegrationTesting(
-    bases=(FIXTURE,), name='collective.folderorder:Integration')
+    bases=(FIXTURE,), name="collective.folderorder:Integration"
+)
 
 FUNCTIONAL_TESTING = FunctionalTesting(
-    bases=(FIXTURE,), name='collective.folderorder:Functional')
+    bases=(FIXTURE,), name="collective.folderorder:Functional"
+)

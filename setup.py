@@ -1,52 +1,49 @@
-from setuptools import setup, find_packages
+from setuptools import find_packages
+from setuptools import setup
 
-version = '1.4.3.dev0'
-shortdesc = 'Set sort order of plone folders'
-longdesc = open('README.rst').read() + '\n'
-longdesc += open('CHANGES.rst').read() + '\n'
-longdesc += open('LICENSE.rst').read()
+
+version = "1.4.3.dev0"
+shortdesc = "Set sort order of plone folders"
+longdesc = open("README.rst").read() + "\n"
+longdesc += open("CHANGES.rst").read() + "\n"
+longdesc += open("LICENSE.rst").read()
 
 setup(
-    name='collective.folderorder',
+    name="collective.folderorder",
     version=version,
     description=shortdesc,
     long_description=longdesc,
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
-        'License :: OSI Approved :: GNU General Public License (GPL)',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python',
-        'Topic :: Software Development',
+        "Development Status :: 5 - Production/Stable",
+        "License :: OSI Approved :: GNU General Public License (GPL)",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Topic :: Software Development",
         "Framework :: Plone",
     ],
-    keywords='',
-    author='Jens Klein    ',
-    author_email='jens@bluedynamics.com',
-    url=u'http://github.com/collective/collective.folderorder',
-    license='GPLv2',
-    packages=find_packages('src'),
-    package_dir={'': 'src'},
-    namespace_packages=['collective'],
+    keywords="",
+    author="Jens Klein    ",
+    author_email="jens@bluedynamics.com",
+    url=u"http://github.com/collective/collective.folderorder",
+    license="GPLv2",
+    packages=find_packages("src"),
+    package_dir={"": "src"},
+    namespace_packages=["collective"],
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'setuptools',
-        'Products.CMFPlone',
-        'Products.statusmessages',
-        'plone.folder',
-        'yafowil',
-        'yafowil.plone',
-        'yafowil.yaml',
-        'zope.component',
-        'zope.i18nmessageid',
-        'Zope2',  # For Products.Five
+        "setuptools",
+        "Products.CMFPlone",
+        "Products.statusmessages",
+        "plone.folder",
+        "yafowil",
+        "yafowil.plone",
+        "yafowil.yaml",
+        "zope.component",
+        "zope.i18nmessageid",
+        "Zope2",  # For Products.Five
     ],
-    extras_require={
-        'test': [
-            'plone.app.robotframework',
-            'plone.app.testing',
-        ],
-    },
+    extras_require={"test": ["plone.app.robotframework", "plone.app.testing",],},
     entry_points="""
     [z3c.autoinclude.plugin]
     target = plone
