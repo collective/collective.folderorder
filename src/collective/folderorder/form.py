@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from plone.folder.interfaces import IOrdering
 from Products.Five import BrowserView
 from Products.statusmessages.interfaces import IStatusMessage

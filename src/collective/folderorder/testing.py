@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Setup testing infrastructure."""
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting

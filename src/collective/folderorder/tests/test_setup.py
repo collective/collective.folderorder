@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from collective.folderorder.testing import INTEGRATION_TESTING
 
 import unittest

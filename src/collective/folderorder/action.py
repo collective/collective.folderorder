@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from plone.folder.interfaces import IOrderableFolder
 from Products.Five import BrowserView
 
